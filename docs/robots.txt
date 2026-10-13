@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ank-kumar.github.io/video-contributions/sitemap.xml
