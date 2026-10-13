@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Video contributions — Ank Kumar</title>
+<meta name="description" content="Underwater and travel footage filmed by Ank Kumar, released under CC BY-SA 4.0 for anyone to use. Starting with 48 seconds on the Great Barrier Reef.">
+<link rel="canonical" href="https://ank-kumar.github.io/video-contributions/">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="Video contributions — Ank Kumar">
+<meta property="og:description" content="Footage I shoot, released free for anyone to use. Starting with 48 seconds on the Great Barrier Reef.">
+<meta property="og:url" content="https://ank-kumar.github.io/video-contributions/">
+<meta property="og:image" content="https://ank-kumar.github.io/video-contributions/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200;300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --abyss:#08181F; --deep:#0F2C36; --teal:#17879A;
+  --surf:#43BFD1; --foam:#E4F4F6; --muted:#8CB0B8; --rule:#1B3A45;
+  --col:1000px; --gut:clamp(18px,5vw,40px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--abyss);color:var(--foam);
+  font:300 17px/1.7 Spectral,Georgia,"Times New Roman",serif}
+img,video{display:block;max-width:100%}
+a{color:var(--surf);text-decoration:none;border-bottom:1px solid rgba(67,191,209,.35)}
+a:hover{border-bottom-color:var(--surf)}
+a:focus-visible,video:focus-visible{outline:2px solid var(--surf);outline-offset:3px}
+.wrap{max-width:var(--col);margin:0 auto;padding:0 var(--gut)}
+
+/* the water arrives before any words */
+.hero{position:relative;height:min(86vh,820px);min-height:420px;overflow:hidden;background:var(--deep)}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(8,24,31,.15) 0%,rgba(8,24,31,0) 32%,rgba(8,24,31,.84) 84%,var(--abyss) 100%)}
+.hero .words{position:absolute;z-index:1;left:0;right:0;bottom:0;padding-bottom:clamp(28px,5vw,60px)}
+h1{font-weight:200;font-size:clamp(30px,5.4vw,62px);line-height:1.08;
+  letter-spacing:-.015em;margin:0;max-width:17ch}
+.hero .words p{margin:14px 0 0;color:#BFDDE2;font-size:clamp(15px,1.7vw,19px);max-width:46ch}
+
+section{padding-top:clamp(56px,8vw,96px)}
+h2{font-weight:200;font-size:clamp(23px,3vw,34px);line-height:1.2;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 26px;font-size:16px}
+p{max-width:68ch}
+
+figure{margin:0}
+figure video{width:100%;height:auto;aspect-ratio:16/9;background:#000;border-radius:3px}
+figcaption{margin-top:12px;color:var(--muted);font-size:14px;max-width:68ch}
+
+.meta{display:grid;gap:30px 56px;margin-top:34px;padding-top:30px;border-top:1px solid var(--rule)}
+@media(min-width:860px){.meta{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
+dl.spec{display:grid;grid-template-columns:auto 1fr;gap:12px 26px;margin:0;align-content:start}
+dl.spec dt{color:var(--muted);font-size:15px}
+dl.spec dd{margin:0;font-size:16px}
+.reuse{border-left:2px solid var(--teal);padding:2px 0 2px 22px}
+.reuse p{margin:0;max-width:52ch}
+.reuse p + p{margin-top:12px}
+
+footer{margin-top:clamp(64px,9vw,112px);border-top:1px solid var(--rule);
+  padding-top:30px;padding-bottom:72px;color:var(--muted);font-size:15px}
+footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px 30px;margin:0 0 16px;padding:0}
+footer p{margin:0;font-size:14px}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <video id="loop" muted loop playsinline preload="none" poster="hero-poster.jpg" aria-hidden="true" tabindex="-1">
+    <source src="vids/hero-loop.mp4" type="video/mp4">
+  </video>
+  <div class="words"><div class="wrap">
+    <h1>Film I shoot, free for anyone to use.</h1>
+    <p>Starting with forty-eight seconds on the Great Barrier Reef. Thousands more clips are being catalogued.</p>
+  </div></div>
+</div>
+
+<main class="wrap">
+  <section>
+    <h2>Great Barrier Reef</h2>
+    <p class="sub">Three dives, cut to forty-eight seconds.</p>
+    <figure>
+      <video controls preload="none" playsinline poster="poster.jpg" width="1280" height="720">
+        <source src="vids/reef-2016-great-barrier-reef.mp4" type="video/mp4">
+        <p>Your browser cannot play this video.
+           <a href="vids/reef-2016-great-barrier-reef.mp4">Download the file instead</a>.</p>
+      </video>
+      <figcaption>Filmed by Ank Kumar on the Great Barrier Reef, Queensland, Australia. Colour corrected to restore the red that water absorbs at depth; otherwise unaltered.</figcaption>
+    </figure>
+
+    <div class="meta">
+      <dl class="spec">
+        <dt>Filmed</dt><dd>13 October 2016</dd>
+        <dt>Camera</dt><dd>GoPro, in housing</dd>
+        <dt>This cut</dt><dd>48 seconds, drawn from 17 minutes across three&nbsp;dives</dd>
+        <dt>Licence</dt><dd>CC BY-SA 4.0</dd>
+      </dl>
+      <div class="reuse">
+        <p>Use this anywhere, including commercially. Credit <strong>Ank Kumar</strong>, and release anything you build from it under the same licence.</p>
+        <p>You do not need to ask me first, and you do not need to tell me. That is the whole point of the licence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What lands here next</h2>
+    <p>I have thousands of clips going back years, most of them never published. They are being catalogued by trip, place and date, and will appear here as they are processed.</p>
+    <p>The files themselves will live on the Internet Archive and, where the footage is useful to an encyclopaedia, on Wikimedia Commons. This page is the index, not the warehouse.</p>
+  </section>
+
+  <footer>
+    <ul>
+      <li><a href="https://ank-kumar.github.io/">Ank Kumar</a></li>
+      <li><a href="https://ank-kumar.github.io/ank-kumar-photo-contributions/">Photographs</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/User:Ank_Kumar">Wikimedia Commons</a></li>
+    </ul>
+    <p>All footage on this page is released under the Creative Commons Attribution-ShareAlike 4.0 licence.</p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var v = document.getElementById('loop');
+  if (!v) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  v.play().catch(function(){ /* autoplay blocked: the poster stands in */ });
+})();
+</script>
+</body>
+</html>

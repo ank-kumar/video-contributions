@@ -1,0 +1,6 @@
+.DS_Store
+# Raw footage stays on the laptop; only web cuts ship
+/originals/
+*.MOV
+*.MP4
+!docs/vids/*.mp4
