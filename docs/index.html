@@ -50,7 +50,7 @@
 :root{
   --abyss:#08181F; --deep:#0F2C36; --teal:#17879A;
   --surf:#43BFD1; --foam:#E4F4F6; --muted:#8CB0B8; --rule:#1B3A45;
-  --col:1000px; --gut:clamp(18px,5vw,40px);
+  --col:1200px; --gut:clamp(18px,5vw,40px);
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -80,15 +80,141 @@ figure{margin:30px 0 0}
 figure video{width:100%;height:auto;aspect-ratio:16/9;background:#000;border-radius:3px}
 figcaption{margin-top:12px;color:var(--muted);font-size:14px;max-width:68ch}
 
-.archive-clips{display:grid;gap:16px;margin-top:30px}
-.archive-clip{border:1px solid var(--rule);padding:18px;background:rgba(15,44,54,.42)}
-.archive-clip h3{font-weight:400;font-size:21px;line-height:1.25;margin:0}
-.archive-clip p{margin:7px 0 0;color:var(--muted);font-size:15px}
-.archive-clip button{appearance:none;margin-top:16px;padding:10px 15px;border:1px solid var(--surf);background:transparent;color:var(--foam);font:400 15px/1 Spectral,Georgia,"Times New Roman",serif;cursor:pointer}
-.archive-clip button:hover,.archive-clip button:focus-visible{background:var(--teal);outline:none}
-.archive-player{display:none;margin-top:16px;background:#000;aspect-ratio:16/9}
+/* Responsive video gallery */
+.archive-thumb{
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  margin-bottom:14px;
+  background:#000;
+}
+.archive-thumb img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.archive-thumb img[hidden]{display:none}
+.archive-clips{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch;
+  gap:24px;
+  margin-top:30px;
+}
+.archive-clip{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  border:1px solid var(--rule);
+  padding:14px;
+  background:rgba(15,44,54,.42);
+}
+.archive-clip h3{
+  font-weight:400;
+  font-size:18px;
+  line-height:1.3;
+  margin:0;
+}
+.archive-clip p{
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.55;
+}
+.archive-clip button{
+  appearance:none;
+  align-self:flex-start;
+  margin-top:auto;
+  padding:10px 15px;
+  border:1px solid var(--surf);
+  background:transparent;
+  color:var(--foam);
+  font:400 15px/1.2 Spectral,Georgia,"Times New Roman",serif;
+  cursor:pointer;
+}
+.archive-clip button:hover,
+.archive-clip button:focus-visible{
+  background:var(--teal);
+  outline:2px solid var(--surf);
+  outline-offset:2px;
+}
+.archive-player{
+  display:none;
+  width:100%;
+  margin-top:16px;
+  background:#000;
+  aspect-ratio:16/9;
+}
 .archive-player.is-playing{display:block}
-.archive-player iframe{display:block;width:100%;height:100%;border:0}
+.archive-player iframe{
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+}
+.archive-player-tools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:8px;
+}
+.archive-player-tools button{
+  margin:0;
+  padding:7px 11px;
+  font-size:14px;
+}
+.archive-clip.is-half-screen{
+  position:fixed;
+  z-index:1000;
+  top:50%;
+  left:50%;
+  width:min(50vw,900px);
+  max-height:90vh;
+  overflow:auto;
+  transform:translate(-50%,-50%);
+  box-shadow:0 0 0 100vmax rgba(0,0,0,.78);
+}
+.archive-clip.is-half-screen .archive-thumb{
+  aspect-ratio:16/9;
+}
+.archive-clip.is-full-screen,
+.archive-clip:fullscreen{
+  position:fixed;
+  z-index:1001;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  padding:clamp(12px,3vw,32px);
+  background:var(--abyss);
+}
+.archive-clip.is-full-screen .archive-thumb{
+  width:min(100%,1600px);
+  margin:0 auto 14px;
+  aspect-ratio:16/9;
+}
+.archive-clip.is-full-screen .archive-player-tools,
+.archive-clip.is-half-screen .archive-player-tools{
+  justify-content:center;
+}
+@media(max-width:700px){
+  .archive-clip.is-half-screen{
+    width:calc(100vw - 24px);
+  }
+}
+
+@media(max-width:900px){
+  .archive-clips{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .archive-clips{grid-template-columns:minmax(0,1fr);gap:16px}
+  .archive-clip{padding:16px}
+  .archive-clip h3{font-size:20px}
+}
+
+
+
 
 .meta{display:grid;gap:30px 56px;margin-top:34px;padding-top:30px;border-top:1px solid var(--rule)}
 @media(min-width:860px){.meta{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
@@ -150,18 +276,21 @@ footer p{margin:0;font-size:14px}
     <p>These clips play on this site. Archive.org preserves the source files and provides downloads for reuse.</p>
     <div class="archive-clips">
       <article class="archive-clip" data-archive-id="img-1455_20261015_1505">
+        <div class="archive-thumb"><img src="https://archive.org/services/img/img-1455_20261015_1505" alt="" loading="lazy"></div>
         <h3>Great Barrier Reef dive</h3>
         <p>Breaking Patches, Hastings, Flynn, Norman, Saxon and Jorgensen Patch reefs. October 2016.</p>
         <button type="button" class="watch-clip" aria-expanded="false">Play here</button>
         <div class="archive-player" aria-live="polite"></div>
       </article>
       <article class="archive-clip" data-archive-id="img-1458_202610">
+        <div class="archive-thumb"><img src="https://archive.org/services/img/img-1458_202610" alt="" loading="lazy"></div>
         <h3>Great Barrier Reef dive</h3>
         <p>Scuba diving footage from the Great Barrier Reef, Cairns, Queensland. October 2016.</p>
         <button type="button" class="watch-clip" aria-expanded="false">Play here</button>
         <div class="archive-player" aria-live="polite"></div>
       </article>
       <article class="archive-clip" data-archive-id="img-3770_202610">
+        <div class="archive-thumb"><img src="https://archive.org/services/img/img-3770_202610" alt="" loading="lazy"></div>
         <h3>Macau Tower bungy jump</h3>
         <p>Macau Tower, 233 metres. May 2016.</p>
         <button type="button" class="watch-clip" aria-expanded="false">Play here</button>
@@ -196,35 +325,111 @@ footer p{margin:0;font-size:14px}
 
 (function(){
   var clips = document.querySelectorAll('.archive-clip');
+
+  function removeDisplayModes(clip){
+    clip.classList.remove('is-half-screen', 'is-full-screen');
+  }
+
+  function closeClip(clip){
+    var player = clip.querySelector('.archive-player');
+    var thumb = clip.querySelector('.archive-thumb');
+    var image = thumb.querySelector('img');
+    var button = clip.querySelector('.watch-clip');
+    var tools = clip.querySelector('.archive-player-tools');
+
+    if (tools) tools.remove();
+    player.replaceChildren();
+    player.classList.remove('is-playing');
+    removeDisplayModes(clip);
+
+    if (player.parentElement !== clip) {
+      clip.appendChild(player);
+    }
+
+    image.hidden = false;
+    button.textContent = 'Play here';
+    button.setAttribute('aria-expanded', 'false');
+  }
+
   clips.forEach(function(clip){
     var button = clip.querySelector('.watch-clip');
     var player = clip.querySelector('.archive-player');
+    var thumb = clip.querySelector('.archive-thumb');
+    var image = thumb.querySelector('img');
     var id = clip.getAttribute('data-archive-id');
+
     button.addEventListener('click', function(){
-      clips.forEach(function(other){
-        if (other === clip) return;
-        other.querySelector('.archive-player').replaceChildren();
-        other.querySelector('.archive-player').classList.remove('is-playing');
-        other.querySelector('.watch-clip').textContent = 'Play here';
-        other.querySelector('.watch-clip').setAttribute('aria-expanded', 'false');
-      });
       if (player.classList.contains('is-playing')) {
-        player.replaceChildren();
-        player.classList.remove('is-playing');
-        button.textContent = 'Play here';
-        button.setAttribute('aria-expanded', 'false');
+        closeClip(clip);
         return;
       }
+
+      clips.forEach(function(other){
+        if (other !== clip) closeClip(other);
+      });
+
       var frame = document.createElement('iframe');
       frame.src = 'https://archive.org/embed/' + encodeURIComponent(id);
       frame.title = clip.querySelector('h3').textContent;
       frame.allow = 'autoplay; fullscreen';
       frame.allowFullscreen = true;
+
+      var tools = document.createElement('div');
+      tools.className = 'archive-player-tools';
+
+      var half = document.createElement('button');
+      half.type = 'button';
+      half.textContent = 'Theater mode';
+      half.addEventListener('click', function(){
+        clip.classList.remove('is-full-screen');
+        clip.classList.toggle('is-half-screen');
+      });
+
+      var full = document.createElement('button');
+      full.type = 'button';
+      full.textContent = 'Full screen';
+      full.addEventListener('click', function(){
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+          return;
+        }
+        if (clip.requestFullscreen) {
+          clip.classList.add('is-full-screen');
+          clip.requestFullscreen().catch(function(){
+            clip.classList.remove('is-full-screen');
+          });
+        }
+      });
+
+      var exit = document.createElement('button');
+      exit.type = 'button';
+      exit.textContent = 'Exit expanded view';
+      exit.addEventListener('click', function(){
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        }
+        removeDisplayModes(clip);
+      });
+
+      tools.append(half, full, exit);
+
+      image.hidden = true;
+      thumb.appendChild(player);
       player.replaceChildren(frame);
+      thumb.after(tools);
       player.classList.add('is-playing');
+
       button.textContent = 'Close player';
       button.setAttribute('aria-expanded', 'true');
     });
+  });
+
+  document.addEventListener('fullscreenchange', function(){
+    if (!document.fullscreenElement) {
+      clips.forEach(function(clip){
+        clip.classList.remove('is-full-screen');
+      });
+    }
   });
 })();
 </script>
