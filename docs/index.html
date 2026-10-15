@@ -80,6 +80,16 @@ figure{margin:30px 0 0}
 figure video{width:100%;height:auto;aspect-ratio:16/9;background:#000;border-radius:3px}
 figcaption{margin-top:12px;color:var(--muted);font-size:14px;max-width:68ch}
 
+.archive-clips{display:grid;gap:16px;margin-top:30px}
+.archive-clip{border:1px solid var(--rule);padding:18px;background:rgba(15,44,54,.42)}
+.archive-clip h3{font-weight:400;font-size:21px;line-height:1.25;margin:0}
+.archive-clip p{margin:7px 0 0;color:var(--muted);font-size:15px}
+.archive-clip button{appearance:none;margin-top:16px;padding:10px 15px;border:1px solid var(--surf);background:transparent;color:var(--foam);font:400 15px/1 Spectral,Georgia,"Times New Roman",serif;cursor:pointer}
+.archive-clip button:hover,.archive-clip button:focus-visible{background:var(--teal);outline:none}
+.archive-player{display:none;margin-top:16px;background:#000;aspect-ratio:16/9}
+.archive-player.is-playing{display:block}
+.archive-player iframe{display:block;width:100%;height:100%;border:0}
+
 .meta{display:grid;gap:30px 56px;margin-top:34px;padding-top:30px;border-top:1px solid var(--rule)}
 @media(min-width:860px){.meta{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
 dl.spec{display:grid;grid-template-columns:auto 1fr;gap:12px 26px;margin:0;align-content:start}
@@ -136,9 +146,34 @@ footer p{margin:0;font-size:14px}
   </section>
 
   <section>
+    <h2>Watch here</h2>
+    <p>These clips play on this site. Archive.org preserves the source files and provides downloads for reuse.</p>
+    <div class="archive-clips">
+      <article class="archive-clip" data-archive-id="img-1455_20261015_1505">
+        <h3>Great Barrier Reef dive</h3>
+        <p>Breaking Patches, Hastings, Flynn, Norman, Saxon and Jorgensen Patch reefs. October 2016.</p>
+        <button type="button" class="watch-clip" aria-expanded="false">Play here</button>
+        <div class="archive-player" aria-live="polite"></div>
+      </article>
+      <article class="archive-clip" data-archive-id="img-1458_202610">
+        <h3>Great Barrier Reef dive</h3>
+        <p>Scuba diving footage from the Great Barrier Reef, Cairns, Queensland. October 2016.</p>
+        <button type="button" class="watch-clip" aria-expanded="false">Play here</button>
+        <div class="archive-player" aria-live="polite"></div>
+      </article>
+      <article class="archive-clip" data-archive-id="img-3770_202610">
+        <h3>Macau Tower bungy jump</h3>
+        <p>Macau Tower, 233 metres. May 2016.</p>
+        <button type="button" class="watch-clip" aria-expanded="false">Play here</button>
+        <div class="archive-player" aria-live="polite"></div>
+      </article>
+    </div>
+  </section>
+
+  <section>
     <h2>What lands here next</h2>
     <p>I have thousands of clips going back years, most of them never published. They are being catalogued by trip, place and date, and will appear here as they are processed.</p>
-    <p>The files themselves will live on the Internet Archive and, where the footage is useful to an encyclopaedia, on Wikimedia Commons. This page is the index, not the warehouse.</p>
+    <p>The source files are preserved on the Internet Archive and, where the footage is useful to an encyclopaedia, on Wikimedia Commons. This site remains the viewing gateway.</p>
   </section>
 
   <footer>
@@ -157,6 +192,40 @@ footer p{margin:0;font-size:14px}
   if (!v) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   v.play().catch(function(){ /* autoplay blocked: the poster stands in */ });
+})();
+
+(function(){
+  var clips = document.querySelectorAll('.archive-clip');
+  clips.forEach(function(clip){
+    var button = clip.querySelector('.watch-clip');
+    var player = clip.querySelector('.archive-player');
+    var id = clip.getAttribute('data-archive-id');
+    button.addEventListener('click', function(){
+      clips.forEach(function(other){
+        if (other === clip) return;
+        other.querySelector('.archive-player').replaceChildren();
+        other.querySelector('.archive-player').classList.remove('is-playing');
+        other.querySelector('.watch-clip').textContent = 'Play here';
+        other.querySelector('.watch-clip').setAttribute('aria-expanded', 'false');
+      });
+      if (player.classList.contains('is-playing')) {
+        player.replaceChildren();
+        player.classList.remove('is-playing');
+        button.textContent = 'Play here';
+        button.setAttribute('aria-expanded', 'false');
+        return;
+      }
+      var frame = document.createElement('iframe');
+      frame.src = 'https://archive.org/embed/' + encodeURIComponent(id);
+      frame.title = clip.querySelector('h3').textContent;
+      frame.allow = 'autoplay; fullscreen';
+      frame.allowFullscreen = true;
+      player.replaceChildren(frame);
+      player.classList.add('is-playing');
+      button.textContent = 'Close player';
+      button.setAttribute('aria-expanded', 'true');
+    });
+  });
 })();
 </script>
 </body>
