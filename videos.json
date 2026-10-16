@@ -1,12 +1,23 @@
 [
   {
+    "source": "github",
+    "id": "reef",
+    "file": "vids/reef-2016-great-barrier-reef.mp4",
+    "seconds": 48.0,
+    "title": "Great Barrier Reef — 48-second cut",
+    "blurb": "Three dives cut together, colour corrected.",
+    "filmed": "2016-10-13",
+    "poster": "poster.jpg"
+  },
+  {
     "source": "archive",
     "id": "img-1391_202610",
     "file": "IMG_1391.MP4",
     "seconds": 7.76,
     "title": "Great Barrier Reef — descent",
     "blurb": "Dropping in on the outer reef off Cairns.",
-    "filmed": "2016-10-13"
+    "filmed": "2016-10-13",
+    "poster": ""
   },
   {
     "source": "archive",
@@ -15,7 +26,8 @@
     "seconds": 37.87,
     "title": "Great Barrier Reef — reef swim",
     "blurb": "Swimming the coral off Cairns.",
-    "filmed": "2016-10-13"
+    "filmed": "2016-10-13",
+    "poster": ""
   },
   {
     "source": "archive",
@@ -24,7 +36,8 @@
     "seconds": 223.32,
     "title": "Great Barrier Reef — full dive",
     "blurb": "Breaking Patches, Hastings, Flynn, Norman, Saxon and Jorgensen Patch reefs.",
-    "filmed": "2016-10-13"
+    "filmed": "2016-10-13",
+    "poster": ""
   },
   {
     "source": "archive",
@@ -33,7 +46,8 @@
     "seconds": 209.39,
     "title": "Macau Tower bungy jump",
     "blurb": "Macau Tower, 233 metres — the world’s highest commercial bungy.",
-    "filmed": "2016-05"
+    "filmed": "2016-05",
+    "poster": ""
   },
   {
     "source": "archive",
@@ -42,7 +56,8 @@
     "seconds": 123.23,
     "title": "Caterham drift experience",
     "blurb": "Birmingham, United Kingdom.",
-    "filmed": ""
+    "filmed": "",
+    "poster": ""
   },
   {
     "source": "archive",
@@ -51,7 +66,8 @@
     "seconds": 22.55,
     "title": "Swiss Air Force F/A-18C Hornet",
     "blurb": "J-5016 at Zurich Airport.",
-    "filmed": "2018-09"
+    "filmed": "2018-09",
+    "poster": ""
   },
   {
     "source": "archive",
@@ -60,6 +76,7 @@
     "seconds": 20.43,
     "title": "Swiss Air Force Hawker Hunter",
     "blurb": "Hawker Hunter at Zurich Airport.",
-    "filmed": ""
+    "filmed": "",
+    "poster": ""
   }
 ]
