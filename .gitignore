@@ -8,3 +8,5 @@
 # generated/editor backups
 docs/index.html.backup-*
 *.backup-*
+
+.work/
