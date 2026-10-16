@@ -4,3 +4,7 @@
 *.MOV
 *.MP4
 !docs/vids/*.mp4
+
+# generated/editor backups
+docs/index.html.backup-*
+*.backup-*
