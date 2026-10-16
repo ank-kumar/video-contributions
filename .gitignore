@@ -10,3 +10,7 @@ docs/index.html.backup-*
 *.backup-*
 
 .work/
+
+# generated web assets must ship despite the blanket video ignores above
+!docs/previews/*.mp4
+!docs/previews/*.jpg
