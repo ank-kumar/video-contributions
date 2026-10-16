@@ -632,6 +632,15 @@ footer p{margin:0;font-size:14px}
     });
   });
 
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape') return;
+    if (document.fullscreenElement) return;
+    clips.forEach(function(clip){
+      var player = clip.querySelector('.archive-player');
+      if (player && player.classList.contains('is-playing')) closeClip(clip);
+    });
+  });
+
   document.addEventListener('fullscreenchange', function(){
     if (!document.fullscreenElement) {
       clips.forEach(function(clip){
