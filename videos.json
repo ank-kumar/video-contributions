@@ -8,7 +8,8 @@
     "blurb": "Three dives cut together, colour corrected.",
     "filmed": "2016-10-13",
     "poster": "poster.jpg",
-    "derivative": ""
+    "derivative": "",
+    "orientation": "landscape"
   },
   {
     "source": "archive",
@@ -19,7 +20,8 @@
     "blurb": "Dropping in on the outer reef off Cairns.",
     "filmed": "2016-10-13",
     "poster": "",
-    "derivative": "IMG_1391.mp4"
+    "derivative": "IMG_1391.mp4",
+    "orientation": "landscape"
   },
   {
     "source": "archive",
@@ -30,7 +32,8 @@
     "blurb": "Swimming the coral off Cairns.",
     "filmed": "2016-10-13",
     "poster": "",
-    "derivative": ""
+    "derivative": "",
+    "orientation": "landscape"
   },
   {
     "source": "archive",
@@ -41,7 +44,8 @@
     "blurb": "Breaking Patches, Hastings, Flynn, Norman, Saxon and Jorgensen Patch reefs.",
     "filmed": "2016-10-13",
     "poster": "",
-    "derivative": "IMG_3776.mp4"
+    "derivative": "IMG_3776.mp4",
+    "orientation": "landscape"
   },
   {
     "source": "archive",
@@ -52,7 +56,8 @@
     "blurb": "Macau Tower, 233 metres — the world’s highest commercial bungy.",
     "filmed": "2016-05",
     "poster": "",
-    "derivative": ""
+    "derivative": "",
+    "orientation": "landscape"
   },
   {
     "source": "archive",
@@ -63,7 +68,8 @@
     "blurb": "Birmingham, United Kingdom.",
     "filmed": "",
     "poster": "",
-    "derivative": "Ank_K_1594480756.mp4"
+    "derivative": "Ank_K_1594480756.mp4",
+    "orientation": "landscape"
   },
   {
     "source": "archive",
@@ -74,7 +80,8 @@
     "blurb": "J-5016 at Zurich Airport.",
     "filmed": "2018-09",
     "poster": "",
-    "derivative": "Ank_K_1597931743.mp4"
+    "derivative": "Ank_K_1597931743.mp4",
+    "orientation": "landscape"
   },
   {
     "source": "archive",
@@ -85,7 +92,8 @@
     "blurb": "Hawker Hunter at Zurich Airport.",
     "filmed": "",
     "poster": "",
-    "derivative": "Ank_K_1599911255.mp4"
+    "derivative": "Ank_K_1599911255.mp4",
+    "orientation": "landscape"
   },
   {
     "source": "archive",
@@ -96,7 +104,8 @@
     "blurb": "The 37-metre steel and timber icon of Expo 2015, during its evening water and light show.",
     "filmed": "2015",
     "poster": "",
-    "derivative": "IMG_4880.mp4"
+    "derivative": "IMG_4880.mp4",
+    "orientation": "landscape"
   },
   {
     "source": "archive",
@@ -107,6 +116,241 @@
     "blurb": "The canopy in full illumination above the fountains.",
     "filmed": "2015",
     "poster": "",
-    "derivative": "IMG_4881.mp4"
+    "derivative": "IMG_4881.mp4",
+    "orientation": "landscape"
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-02",
+    "file": "IMG_0444.MOV",
+    "derivative": "IMG_0444.mp4",
+    "seconds": 1.7,
+    "title": "Zurich E-Prix 2018 — 02",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "landscape",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-03",
+    "file": "IMG_0445.MOV",
+    "derivative": "IMG_0445.mp4",
+    "seconds": 23.53,
+    "title": "Zurich E-Prix 2018 — 03",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "landscape",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-04",
+    "file": "IMG_0451.MOV",
+    "derivative": "IMG_0451.mp4",
+    "seconds": 15.0,
+    "title": "Zurich E-Prix 2018 — 04",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "landscape",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-05",
+    "file": "IMG_0477.MOV",
+    "derivative": "IMG_0477.mp4",
+    "seconds": 20.93,
+    "title": "Zurich E-Prix 2018 — 05",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "portrait",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-06",
+    "file": "IMG_0478.MOV",
+    "derivative": "IMG_0478.mp4",
+    "seconds": 1.87,
+    "title": "Zurich E-Prix 2018 — 06",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "landscape",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-07",
+    "file": "IMG_0481.MOV",
+    "derivative": "IMG_0481.mp4",
+    "seconds": 3.2,
+    "title": "Zurich E-Prix 2018 — 07",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "landscape",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-08",
+    "file": "IMG_0482.MOV",
+    "derivative": "IMG_0482.mp4",
+    "seconds": 96.17,
+    "title": "Zurich E-Prix 2018 — 08",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "landscape",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-09",
+    "file": "IMG_0485.MOV",
+    "derivative": "IMG_0485.mp4",
+    "seconds": 2.53,
+    "title": "Zurich E-Prix 2018 — 09",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "portrait",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-10",
+    "file": "IMG_0486.MOV",
+    "derivative": "IMG_0486.mp4",
+    "seconds": 2.4,
+    "title": "Zurich E-Prix 2018 — 10",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "portrait",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-11",
+    "file": "IMG_0488.MOV",
+    "derivative": "IMG_0488.mp4",
+    "seconds": 36.67,
+    "title": "Zurich E-Prix 2018 — 11",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "portrait",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-12",
+    "file": "IMG_0493.MOV",
+    "derivative": "IMG_0493.mp4",
+    "seconds": 23.07,
+    "title": "Zurich E-Prix 2018 — 12",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "portrait",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-13",
+    "file": "IMG_0494.MOV",
+    "derivative": "IMG_0494.mp4",
+    "seconds": 1.8,
+    "title": "Zurich E-Prix 2018 — 13",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "portrait",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-14",
+    "file": "IMG_0495.MOV",
+    "derivative": "IMG_0495.mp4",
+    "seconds": 10.27,
+    "title": "Zurich E-Prix 2018 — 14",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "portrait",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-15",
+    "file": "IMG_0542.MOV",
+    "derivative": "IMG_0542.mp4",
+    "seconds": 20.6,
+    "title": "Zurich E-Prix 2018 — 15",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "landscape",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "source": "archive",
+    "id": "ankkumar-zurich-eprix-2018-16",
+    "file": "IMG_0563.MOV",
+    "derivative": "IMG_0563.mp4",
+    "seconds": 108.33,
+    "title": "Zurich E-Prix 2018 — 16",
+    "blurb": "Zurich Street Circuit, 10 June 2018.",
+    "filmed": "2018-06-10",
+    "poster": "",
+    "orientation": "portrait",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "source": "archive",
+    "id": "img-3180_202610",
+    "file": "IMG_3180.MOV",
+    "derivative": "IMG_3180.mp4",
+    "seconds": 100.7,
+    "title": "London Film Museum  - London, The UK (2012)",
+    "blurb": "London Film Museum - London, The UK (2012) The London Film Museum originally opened as The Movieum of London at County H.",
+    "filmed": "2012-07-07",
+    "poster": "",
+    "orientation": "portrait"
+  },
+  {
+    "source": "archive",
+    "id": "img-3198_202610",
+    "file": "IMG_3198.MOV",
+    "derivative": "IMG_3198.mp4",
+    "seconds": 38.15,
+    "title": "London Film Museum - London, The UK (2012)",
+    "blurb": "The London Film Museum originally opened as The Movieum of London at County Hall on the South Bank in February 2008 befo.",
+    "filmed": "2012-07-07",
+    "poster": "",
+    "orientation": "landscape"
   }
 ]
