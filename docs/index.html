@@ -820,7 +820,7 @@ figcaption{margin-top:12px;color:var(--muted);font-size:14px;max-width:68ch}
   width:100%;
   margin-top:16px;
   background:#000;
-  aspect-ratio:16/9;
+  aspect-ratio:var(--ar,16/9);
 }
 .archive-player.is-playing{display:block}
 .archive-player iframe,
@@ -1378,6 +1378,9 @@ footer p{margin:0;font-size:14px}
       tools.append(half, full, exit);
 
       image.hidden = true;
+      var orientation = clip.getAttribute('data-orientation');
+      var ar = orientation === 'portrait' ? '9/16' : '16/9';
+      player.style.setProperty('--ar', ar);
       thumb.appendChild(player);
       player.replaceChildren(frame);
       thumb.after(tools);
