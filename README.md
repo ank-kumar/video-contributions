@@ -26,6 +26,28 @@ compressed or speed-corrected will report the edit date, not the
 capture date. Reconcile across all available tags and flag
 disagreements rather than trusting a single field.
 
+## Deployment process
+
+Upload to Archive.org stays manual (`ia upload`, or the web uploader — 5 items
+at a time is the practical batch limit before Archive throttles). Everything
+after that is scripted:
+
+1. Upload the file(s) to Archive.org, note each identifier and the filename
+   as uploaded.
+2. Write a `pending-clips.json` (see `scripts/publish_clips.py` docstring for
+   the shape: id, local source path, archive filename, title, blurb, filmed
+   date).
+3. Run `python3 scripts/publish_clips.py pending-clips.json` from the repo
+   root. It reads duration and orientation from the source file (accounting
+   for phone-camera rotation tags), generates the preview clip and thumbnail
+   into `docs/previews/`, appends the entry to `videos.json`, inserts the
+   `<article>` card and the JSON-LD `VideoObject` into `docs/index.html`, and
+   recomputes the vfilter counts from what's actually rendered on the page
+   (not from `videos.json`, which can hold more entries than are published).
+4. Review the diff, then push through the normal dev-copy approval flow.
+
+Re-run the script safely: any `id` already in `videos.json` is skipped.
+
 ## Open items
 
 Recorded 16 Oct 2026. The page is live and working; none of these block a

@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200;300;400;600&display=swap" rel="stylesheet">
-<script type="application/ld+json"><script type="application/ld+json">
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -691,10 +691,88 @@
         "contentUrl": "https://archive.org/download/gherkin-2012-london/gherkin-2012.MOV",
         "embedUrl": "https://archive.org/embed/gherkin-2012-london",
         "dateCreated": "2012-09"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Alpine Air Ambulance \u2014 rescue demo, Zurich Festival - 2019",
+        "description": "Airbus H135 rescue and medical evacuation demonstration over Zurich Lake.",
+        "duration": "PT2M20S",
+        "uploadDate": "2026-10-20T16:00:00+05:30",
+        "thumbnailUrl": [
+          "https://ank-kumar.github.io/video-contributions/previews/07072019190027.jpg"
+        ],
+        "creator": {
+          "@type": "Person",
+          "name": "Ank Kumar",
+          "url": "https://ank-kumar.github.io/"
+        },
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": "Ank Kumar",
+          "url": "https://ank-kumar.github.io/"
+        },
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "isFamilyFriendly": true,
+        "inLanguage": "en",
+        "contentUrl": "https://archive.org/download/07072019190027/07072019190027.mov",
+        "embedUrl": "https://archive.org/embed/07072019190027",
+        "dateCreated": "2019-07-07"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Alpine Air Ambulance \u2014 hoist rescue, Zurich Festival - 2019",
+        "description": "Precision hoisting during the rescue demonstration, Zurich Lake.",
+        "duration": "PT1M3S",
+        "uploadDate": "2026-10-20T16:00:00+05:30",
+        "thumbnailUrl": [
+          "https://ank-kumar.github.io/video-contributions/previews/07072019190249.jpg"
+        ],
+        "creator": {
+          "@type": "Person",
+          "name": "Ank Kumar",
+          "url": "https://ank-kumar.github.io/"
+        },
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": "Ank Kumar",
+          "url": "https://ank-kumar.github.io/"
+        },
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "isFamilyFriendly": true,
+        "inLanguage": "en",
+        "contentUrl": "https://archive.org/download/07072019190249/07072019190249.MOV",
+        "embedUrl": "https://archive.org/embed/07072019190249",
+        "dateCreated": "2019-07-07"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Alpine Air Ambulance \u2014 helicopter overhead - 2019",
+        "description": "The H135 passing low over the festival crowd, Zurich Lake.",
+        "duration": "PT46S",
+        "uploadDate": "2026-10-20T16:00:00+05:30",
+        "thumbnailUrl": [
+          "https://ank-kumar.github.io/video-contributions/previews/img-6568_202610.jpg"
+        ],
+        "creator": {
+          "@type": "Person",
+          "name": "Ank Kumar",
+          "url": "https://ank-kumar.github.io/"
+        },
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": "Ank Kumar",
+          "url": "https://ank-kumar.github.io/"
+        },
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "isFamilyFriendly": true,
+        "inLanguage": "en",
+        "contentUrl": "https://archive.org/download/img-6568_202610/IMG_6568.MOV",
+        "embedUrl": "https://archive.org/embed/img-6568_202610",
+        "dateCreated": "2019-07-07"
       }
     ]
   }
-</script>>
+</script>
 <style>
 :root{
   --abyss:#08181F; --deep:#0F2C36; --teal:#17879A;
@@ -854,7 +932,26 @@ figcaption{margin-top:12px;color:var(--muted);font-size:14px;max-width:68ch}
   box-shadow:0 0 0 100vmax rgba(0,0,0,.78);
 }
 .archive-clip.is-half-screen .archive-thumb{
-  aspect-ratio:16/9;
+  aspect-ratio:var(--ar,16/9);
+}
+/* Portrait clips: fit the viewport by height instead of width, like a
+   phone-shaped player, so playback never needs scrolling and the full
+   frame is visible (no 16/9 crop forced on tall footage). */
+.archive-clip.is-half-screen[data-orientation="portrait"]{
+  width:auto;
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+.archive-clip.is-half-screen[data-orientation="portrait"] .archive-thumb,
+.archive-clip.is-half-screen[data-orientation="portrait"] .archive-player{
+  width:auto;
+  height:auto;
+  flex:1 1 auto;
+  min-height:0;
+  margin-left:auto;
+  margin-right:auto;
 }
 .archive-clip.is-full-screen,
 .archive-clip:fullscreen{
@@ -866,11 +963,22 @@ figcaption{margin-top:12px;color:var(--muted);font-size:14px;max-width:68ch}
   overflow:auto;
   padding:clamp(12px,3vw,32px);
   background:var(--abyss);
+  display:flex;
+  flex-direction:column;
 }
 .archive-clip.is-full-screen .archive-thumb{
   width:min(100%,1600px);
   margin:0 auto 14px;
-  aspect-ratio:16/9;
+  aspect-ratio:var(--ar,16/9);
+}
+.archive-clip.is-full-screen[data-orientation="portrait"] .archive-thumb,
+.archive-clip.is-full-screen[data-orientation="portrait"] .archive-player{
+  width:auto;
+  height:auto;
+  flex:1 1 auto;
+  min-height:0;
+  margin-left:auto;
+  margin-right:auto;
 }
 .archive-clip.is-full-screen .archive-player-tools,
 .archive-clip.is-half-screen .archive-player-tools{
@@ -935,9 +1043,9 @@ footer p.copy{white-space:nowrap}
       </div>
 
     <div class="vfilter" role="group" aria-label="Filter by orientation">
-      <button type="button" data-filter="all" aria-pressed="true">All 26</button>
-      <button type="button" data-filter="landscape" aria-pressed="false">Landscape 20</button>
-      <button type="button" data-filter="portrait" aria-pressed="false">Portrait 6</button>
+      <button type="button" data-filter="all" aria-pressed="true">All 29</button>
+      <button type="button" data-filter="landscape" aria-pressed="false">Landscape 22</button>
+      <button type="button" data-filter="portrait" aria-pressed="false">Portrait 7</button>
     </div>
     <div class="archive-clips">
       <article class="archive-clip" data-orientation="landscape" data-local-src="vids/reef-2016-great-barrier-reef.mp4">
@@ -1249,6 +1357,42 @@ footer p.copy{white-space:nowrap}
         </div>
         <h3>The Gherkin (30 St Mary Axe) - London, The UK - 2012</h3>
         <p>Footage from the Gherkin's public opening during Open House London on September 22-23, 2012. — 0:03</p>
+        <button type="button" class="watch-clip" aria-expanded="false">Play here</button>
+        <div class="archive-player" aria-live="polite"></div>
+      </article>
+      <article class="archive-clip" data-orientation="landscape" data-archive-id="07072019190027">
+        <div class="archive-thumb" style="--ar:16/9">
+          <img src="previews/07072019190027.jpg" alt="" loading="lazy">
+          <video class="hover-preview" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
+            <source src="previews/07072019190027.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h3>Alpine Air Ambulance — rescue demo, Zurich Festival - 2019</h3>
+        <p>Airbus H135 rescue and medical evacuation demonstration over Zurich Lake. — 2:20</p>
+        <button type="button" class="watch-clip" aria-expanded="false">Play here</button>
+        <div class="archive-player" aria-live="polite"></div>
+      </article>
+      <article class="archive-clip" data-orientation="landscape" data-archive-id="07072019190249">
+        <div class="archive-thumb" style="--ar:16/9">
+          <img src="previews/07072019190249.jpg" alt="" loading="lazy">
+          <video class="hover-preview" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
+            <source src="previews/07072019190249.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h3>Alpine Air Ambulance — hoist rescue, Zurich Festival - 2019</h3>
+        <p>Precision hoisting during the rescue demonstration, Zurich Lake. — 1:03</p>
+        <button type="button" class="watch-clip" aria-expanded="false">Play here</button>
+        <div class="archive-player" aria-live="polite"></div>
+      </article>
+      <article class="archive-clip" data-orientation="portrait" data-archive-id="img-6568_202610">
+        <div class="archive-thumb" style="--ar:9/16">
+          <img src="previews/img-6568_202610.jpg" alt="" loading="lazy">
+          <video class="hover-preview" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
+            <source src="previews/img-6568_202610.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h3>Alpine Air Ambulance — helicopter overhead - 2019</h3>
+        <p>The H135 passing low over the festival crowd, Zurich Lake. — 0:46</p>
         <button type="button" class="watch-clip" aria-expanded="false">Play here</button>
         <div class="archive-player" aria-live="polite"></div>
       </article>

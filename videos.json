@@ -352,8 +352,7 @@
     "filmed": "2012-07-07",
     "poster": "",
     "orientation": "landscape"
-  }
-],
+  },
   {
     "source": "archive",
     "id": "img-3771_20261017",
@@ -437,5 +436,41 @@
     "orientation": "portrait",
     "width": 270,
     "height": 480
+  },
+  {
+    "source": "archive",
+    "id": "07072019190027",
+    "file": "07072019190027.mov",
+    "seconds": 140.12,
+    "title": "Alpine Air Ambulance — rescue demo, Zurich Festival - 2019",
+    "blurb": "Airbus H135 rescue and medical evacuation demonstration over Zurich Lake.",
+    "filmed": "2019-07-07",
+    "poster": "",
+    "derivative": "",
+    "orientation": "landscape"
+  },
+  {
+    "source": "archive",
+    "id": "07072019190249",
+    "file": "07072019190249.MOV",
+    "seconds": 63.46,
+    "title": "Alpine Air Ambulance — hoist rescue, Zurich Festival - 2019",
+    "blurb": "Precision hoisting during the rescue demonstration, Zurich Lake.",
+    "filmed": "2019-07-07",
+    "poster": "",
+    "derivative": "",
+    "orientation": "landscape"
+  },
+  {
+    "source": "archive",
+    "id": "img-6568_202610",
+    "file": "IMG_6568.MOV",
+    "seconds": 45.66,
+    "title": "Alpine Air Ambulance — helicopter overhead - 2019",
+    "blurb": "The H135 passing low over the festival crowd, Zurich Lake.",
+    "filmed": "2019-07-07",
+    "poster": "",
+    "derivative": "",
+    "orientation": "portrait"
   }
 ]
